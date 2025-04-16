@@ -1,0 +1,20 @@
+{
+  "name": "fraunhofer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "_comment": "To make Heroku use this version and specify version for it",
+  "engines": {
+    "node": "23.9.0",
+    "npm": "10.9.2"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "_comment": "To make Heroku run this script when it start"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
