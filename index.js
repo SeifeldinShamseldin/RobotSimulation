@@ -17,9 +17,9 @@ app.use(express.urlencoded({ extended: true })); // Middleware to parse URL-enco
 
 // Configure session handling
 app.use(session({
-  secret: 'notagoodsecret', // Secret used to sign session ID cookie
-  resave: false,            // Don't save session if unmodified
-  saveUninitialized: false  // Don't create session until something is stored
+  secret: 'notagoodsecret',
+  resave: false,
+  saveUninitialized: false
 }));
 
 // Initialize Passport.js for authentication and session tracking
@@ -30,7 +30,7 @@ app.use(passport.session());
 app.use('/', routes); // Mount all routes defined in components/routes.js at root
 
 // ---------------------- Start Server ----------------------
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Required for Render!
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
